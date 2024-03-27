@@ -29,17 +29,18 @@ spring:
 #Cloud
 
 #Circuit Breaker
-#CHECK_EXISTING_USER_BREAKER
 resilience4j:
   circuitbreaker:
-    instances:
-      CHECK_EXISTING_USER_BREAKER:
+    configs:
+      default:
         sliding-window-size: 10
         minimum-number-of-calls: 5
         wait-duration-in-open-state: 5000
         failure-rate-threshold: 50
         permitted-number-of-calls-in-half-open-state: 3
         automatic-transition-from-open-to-half-open-enabled: true
+        register-health-indicator: true
+        allowHealthIndicatorToFail: false
 #Jeager
 tracing:
   url: http://localhost:4318/v1/traces
