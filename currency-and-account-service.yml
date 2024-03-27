@@ -6,11 +6,11 @@ spring:
     name: currency-and-account-service
 
   #Datasource
-  datasource:
-    url: jdbc:mysql://localhost:3306/moneyaccountdatabase
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: Satgaino1@
+  # datasource:
+  #   url: jdbc:mysql://localhost:3306/moneyaccountdatabase
+  #   driver-class-name: com.mysql.cj.jdbc.Driver
+  #   username: root
+  #   password: Satgaino1@
 
 #Jpa
   jpa:
@@ -52,12 +52,12 @@ management:
       probability: 1.0
 
 #Variables
-jwkSetUri: http://localhost:8088/oauth2/jwks
-jwtAuthoritiesClaimName: roles
-issuer: http://localhost:8088
+# jwkSetUri: http://localhost:8088/oauth2/jwks
+# jwtAuthoritiesClaimName: roles
+# issuer: http://localhost:8088
 
 #Eureka
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9000/eureka/
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:9000/eureka/
